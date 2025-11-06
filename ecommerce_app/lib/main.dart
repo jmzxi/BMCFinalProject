@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart'; 
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ecommerce_app/screens/login_screen.dart';
+import 'package:ecommerce_app/screens/auth_wrapper.dart';
 
 
 void main() async { 
@@ -22,16 +23,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 1. MaterialApp is the root of your app
     return MaterialApp(
-      // 2. This removes the "Debug" banner
       debugShowCheckedModeBanner: false, 
       title: 'Arts & Crafts',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      // 3. A simple placeholder for our home screen
-      home: const LoginScreen(),
+      home: const AuthWrapper(), 
     );
   }
 }
